@@ -1,70 +1,51 @@
-# Unit 19 PWA Homework: Online/Offline Budget Trackers
 
-Add functionality to our existing Budget Tracker application to allow for offline access and functionality.
+# Budget - Progressive Web App
+## Author: WellAndGood
 
-The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online.
+# Table of Contents
+* [Overview](#overview)
+* [Access](#appearance)
+* [Function](#function)
+* [Features](#features)
+* [Contributors](#contributors)
+* [License](#license)
 
-Offline Functionality:
+# Overview
 
-  * Enter deposits offline
+This document describes the components of the backend of a progressive web app (PWA). The front-end was created by a third-party. The code being contributed included:
+- Updates to the models folder (with an index.js),
+- A manifest,
+- A service worker for caching the public folder's files,
+- An IndexedDB for caching offline API calls, and
+- Modifications to the server.js file to allow for Heroku deployment.
 
-  * Enter expenses offline
+# Access 
 
-When brought back online:
+You can access the `.git` files at: 
+https://github.com/WellAndGood/ProgressiveWebApp.git
 
-  * Offline entries should be added to tracker.
+You can access the deployed application here on Heroku:
+https://progressivebudgetpwa.herokuapp.com/
 
-## User Story
-AS AN avid traveller
-I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
-SO THAT my account balance is accurate when I am traveling
+# Function
 
-## Business Context
+With these modifications, you can navigate this appliaction both offline and online. You can post changes to your budget by adding or removing funds for line items. All offline publications are cached in its respective IndexedDB objectStore; once online access returns, these indexes are batch-uploaded by API.
 
-Giving users a fast and easy way to track their money is important, but allowing them to access that information anytime is even more important. Having offline functionality is paramount to our applications success.
+## Contributors
+Daniel Pisani (WellAndGood)
 
+# Contact
+* GitHub account: WellAndGood
 
-## Acceptance Criteria
-GIVEN a user is on Budget App without an internet connection
-WHEN the user inputs a withdrawal or deposit
-THEN that will be shown on the page, and added to their transaction history when their connection is back online.
+## License
+This project is licensed under:
 
-- - -
+### MIT License
 
-## Commit Early and Often
+Copyright (c) 2021 Daniel Pisani (WellAndGood) 
 
-* One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
-
-* Follow these guidelines for committing:
-
-  * Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
-
-  * Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
-
-  * Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-  * Test your application before you commit to ensure functionality at every step in the development process
-
-* We would like you to have well over 200 commits by graduation, so commit early and often!
-
-* Deploy your application with [Heroku and MongoDB Atlas.](../04-Important/MongoAtlas-Deploy.md)
-
-## Submission on BCS
-
-* You are required to submit the following:
-
-  * the URL to the deployed application
-
-  * the URL to the Github repository
-
-- - -
-
-## Hint
-
-* In order to cache dynamic content, i.e. users' inputs for withdrawals or deposits, incorporate `indexedDB` from the previous module.
-
-* Use [Google](https://www.google.com) or another search engine to research this topic.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
